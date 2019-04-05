@@ -1,5 +1,5 @@
 const express = require("express");
-// var bodyParser = require('body-parser');
+ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static("public"));
 
 // Parse request body as JSON
-// app.use(bodyParser.urlencoded({ extended: false }));
+ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
